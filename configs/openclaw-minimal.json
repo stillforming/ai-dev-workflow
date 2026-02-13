@@ -1,0 +1,14 @@
+{
+  "$schema": "https://docs.openclaw.ai/config-schema.json",
+
+  "agents": {
+    "defaults": {
+      "model": "anthropic/claude-sonnet-4-20250514",
+      "thinkingDefault": "medium"
+    }
+  },
+
+  "workspace": {
+    "contextFiles": ["AGENTS.md", "SOUL.md", "USER.md", "TOOLS.md"]
+  }
+}

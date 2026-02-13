@@ -1,0 +1,43 @@
+{
+  "$schema": "https://docs.openclaw.ai/config-schema.json",
+
+  "agents": {
+    "defaults": {
+      "model": "anthropic/claude-sonnet-4-20250514",
+      "thinkingDefault": "medium"
+    }
+  },
+
+  "workspace": {
+    "contextFiles": [
+      "AGENTS.md",
+      "SOUL.md",
+      "USER.md",
+      "TOOLS.md",
+      "HEARTBEAT.md",
+      "MEMORY.md"
+    ]
+  },
+
+  "heartbeat": {
+    "enabled": true,
+    "intervalMinutes": 360,
+    "prompt": "Read HEARTBEAT.md if it exists (workspace context). Follow it strictly. If nothing needs attention, reply HEARTBEAT_OK."
+  },
+
+  "channels": {
+    "discord": {
+      "enabled": true,
+      "botToken": "${DISCORD_BOT_TOKEN}"
+    }
+  },
+
+  "memory": {
+    "enabled": true
+  },
+
+  "env": {
+    "note": "Use environment variables for secrets. Never hardcode API keys in this file.",
+    "vars": {}
+  }
+}
